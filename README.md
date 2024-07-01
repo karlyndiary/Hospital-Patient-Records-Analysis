@@ -12,3 +12,69 @@ You’ve been asked to build a high-level KPI report for the executive team, bas
 - How many procedures are covered by insurance?
 
 The dashboard should scale to accommodate new data over time, but the CEO has asked you to summarize any insights you can derive from the sample provided.
+
+Encounters:
+- **Id**: Primary Key. Unique Identifier of the encounter.
+- **Start**: The date and time (iso8601 UTC Date (yyyy-MM-dd'T'HH:mm'Z')) the encounter started.
+- **Stop**: The date and time (iso8601 UTC Date (yyyy-MM-dd'T'HH:mm'Z')) the encounter concluded.
+- **Patient**: Foreign key to the Patient.
+- **Organization**: Foreign key to the Organization.
+- **Payer**: Foreign key to the Payer.
+- **EncounterClass**: The class of the encounter, such as ambulatory, emergency, inpatient, wellness, or urgent care.
+- **Code**: Encounter code from SNOMED-CT.
+- **Description**: Description of the type of encounter.
+- **Base_Encounter_Cost**: The base cost of the encounter, not including any line item costs related to medications, immunizations, procedures, or other services.
+- **Total_Claim_Cost**: The total cost of the encounter, including all line items.
+- **Payer_Coverage**: The amount of cost covered by the Payer.
+- **ReasonCode**: Diagnosis code from SNOMED-CT, only if this encounter targeted a specific condition.
+- **ReasonDescription**: Description of the reason code.
+Organization:
+- **Id**: Primary key of the Organization.
+- **Name**: Name of the Organization.
+- **Address**: Organization's street address without commas or newlines.
+- **City**: Street address city.
+- **State**: Street address state abbreviation.
+- **Zip**: Street address zip or postal code.
+- **Lat**: Latitude of Organization's address.
+- **Lon**: Longitude of Organization's address.
+Patients:
+- **Id**: Primary Key. Unique Identifier of the patient.
+- **BirthDate**: The date (YYYY-MM-DD) the patient was born.
+- **DeathDate**: The date (YYYY-MM-DD) the patient died.
+- **Prefix**: Name prefix, such as Mr., Mrs., Dr., etc.
+- **First**: First name of the patient.
+- **Middle**: Middle name of the patient.
+- **Last**: Last or surname of the patient.
+- **Suffix**: Name suffix, such as PhD, MD, JD, etc.
+- **Maiden**: Maiden name of the patient.
+- **Marital**: Marital Status. M is married, S is single. Currently no support for divorce (D) or widowing (W).
+- **Race**: Description of the patient's primary race.
+- **Ethnicity**: Description of the patient's primary ethnicity.
+- **Gender**: Gender. M is male, F is female.
+- **BirthPlace**: Name of the town where the patient was born.
+- **Address**: Patient's street address without commas or newlines.
+- **City**: Patient's address city.
+- **State**: Patient's address state.
+- **County**: Patient's address county.
+- **FIPS County Code**: Patient's FIPS county code.
+- **Zip**: Patient's zip code.
+- **Lat**: Latitude of Patient's address.
+- **Lon**: Longitude of Patient's address.
+Payers:
+- **Id**: Primary key of the Payer (e.g., Insurance).
+- **Name**: Name of the Payer.
+- **Address**: Payer's street address without commas or newlines.
+- **City**: Street address city.
+- **State_Headquartered**: Street address state abbreviation.
+- **Zip**: Street address zip or postal code.
+- **Phone**: Payer's phone number.
+Procedures:
+- **Start**: The date and time (iso8601 UTC Date (yyyy-MM-dd'T'HH:mm'Z')) the procedure was performed.
+- **Stop**: The date and time (iso8601 UTC Date (yyyy-MM-dd'T'HH:mm'Z')) the procedure was completed, if applicable.
+- **Patient**: Foreign key to the Patient.
+- **Encounter**: Foreign key to the Encounter where the procedure was performed.
+- **Code**: Procedure code from SNOMED-CT.
+- **Description**: Description of the procedure.
+- **Base_Cost**: The line item cost of the procedure.
+- **ReasonCode**: Diagnosis code from SNOMED-CT specifying why this procedure was performed.
+- **ReasonDescription**: Description of the reason code.
