@@ -88,5 +88,6 @@ Our data set consists of the following observations which include:
 - **ReasonCode**: Diagnosis code from SNOMED-CT specifying why this procedure was performed.
 - **ReasonDescription**: Description of the reason code.
 ## ER Diagram
+![Hospital Records drawio](https://github.com/karlyndiary/Hospital-Patient-Records-Analysis/assets/116041695/b9b60f99-0c28-483c-b2ea-3938dd6aa540)
 ## Data Cleaning
 ## Dashboard
