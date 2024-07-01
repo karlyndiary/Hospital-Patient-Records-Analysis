@@ -1,7 +1,6 @@
 # Hospital Patient Records Analysis
 
-Dataset: https://mavenanalytics.io/challenges/maven-hospital-challenge/facee4d2-8369-4c87-a55e-e6c7ed2a42d8?utm_source=email&utm_campaign=mavenhospitalchallenge_email_maven
-
+## Case Study
 For the Maven Hospital Challenge, you’ll play the role of an Analytics Consultant for Massachusetts General Hospital (MGH).
 
 You’ve been asked to build a high-level KPI report for the executive team, based on a subset of patient records. The purpose of the report is to give stakeholders visibility into the hospital’s recent performance, and answer the following questions:
@@ -13,7 +12,19 @@ You’ve been asked to build a high-level KPI report for the executive team, bas
 
 The dashboard should scale to accommodate new data over time, but the CEO has asked you to summarize any insights you can derive from the sample provided.
 
-Encounters:
+## Table of Content
+
+* [Case Study](#case-study)
+* [Dataset Description](#dataset-description)
+* [ER Diagram](#er-diagram)
+* [Data Cleaning](#data-cleaning)
+* [Data Analysis](#data-analysis)
+* [Dashboard](#dashboard)
+  
+## Dataset Description
+Our data set consists of the following observations which include:
+
+#### Encounters:
 - **Id**: Primary Key. Unique Identifier of the encounter.
 - **Start**: The date and time (iso8601 UTC Date (yyyy-MM-dd'T'HH:mm'Z')) the encounter started.
 - **Stop**: The date and time (iso8601 UTC Date (yyyy-MM-dd'T'HH:mm'Z')) the encounter concluded.
@@ -28,7 +39,7 @@ Encounters:
 - **Payer_Coverage**: The amount of cost covered by the Payer.
 - **ReasonCode**: Diagnosis code from SNOMED-CT, only if this encounter targeted a specific condition.
 - **ReasonDescription**: Description of the reason code.
-Organization:
+#### Organization:
 - **Id**: Primary key of the Organization.
 - **Name**: Name of the Organization.
 - **Address**: Organization's street address without commas or newlines.
@@ -37,7 +48,7 @@ Organization:
 - **Zip**: Street address zip or postal code.
 - **Lat**: Latitude of Organization's address.
 - **Lon**: Longitude of Organization's address.
-Patients:
+#### Patients:
 - **Id**: Primary Key. Unique Identifier of the patient.
 - **BirthDate**: The date (YYYY-MM-DD) the patient was born.
 - **DeathDate**: The date (YYYY-MM-DD) the patient died.
@@ -60,7 +71,7 @@ Patients:
 - **Zip**: Patient's zip code.
 - **Lat**: Latitude of Patient's address.
 - **Lon**: Longitude of Patient's address.
-Payers:
+#### Payers:
 - **Id**: Primary key of the Payer (e.g., Insurance).
 - **Name**: Name of the Payer.
 - **Address**: Payer's street address without commas or newlines.
@@ -68,7 +79,7 @@ Payers:
 - **State_Headquartered**: Street address state abbreviation.
 - **Zip**: Street address zip or postal code.
 - **Phone**: Payer's phone number.
-Procedures:
+#### Procedures:
 - **Start**: The date and time (iso8601 UTC Date (yyyy-MM-dd'T'HH:mm'Z')) the procedure was performed.
 - **Stop**: The date and time (iso8601 UTC Date (yyyy-MM-dd'T'HH:mm'Z')) the procedure was completed, if applicable.
 - **Patient**: Foreign key to the Patient.
@@ -78,3 +89,6 @@ Procedures:
 - **Base_Cost**: The line item cost of the procedure.
 - **ReasonCode**: Diagnosis code from SNOMED-CT specifying why this procedure was performed.
 - **ReasonDescription**: Description of the reason code.
+## ER Diagram
+## Data Cleaning
+## Dashboard
