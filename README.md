@@ -87,7 +87,9 @@ Our data set consists of the following observations which include:
 - **Base_Cost**: The line item cost of the procedure.
 - **ReasonCode**: Diagnosis code from SNOMED-CT specifying why this procedure was performed.
 - **ReasonDescription**: Description of the reason code.
+
 ## ER Diagram
-![Hospital Records drawio](https://github.com/karlyndiary/Hospital-Patient-Records-Analysis/assets/116041695/b9b60f99-0c28-483c-b2ea-3938dd6aa540)
+![Hospital Records drawio](https://github.com/karlyndiary/Hospital-Patient-Records-Analysis/assets/116041695/614c3b94-1e7d-4bd3-9e9a-442f5f7a4155)
+
 ## Data Cleaning
 ## Dashboard
