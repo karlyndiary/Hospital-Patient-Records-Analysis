@@ -1,5 +1,12 @@
 # Hospital Patient Records Analysis
+## Table of Content
 
+* [Case Study](#case-study)
+* [Dataset Description](#dataset-description)
+* [ER Diagram](#er-diagram)
+* [Data Cleaning](#data-cleaning)
+* [Data Analysis](#data-analysis)
+* [Dashboard](#dashboard)
 ## Case Study
 For the Maven Hospital Challenge, you’ll play the role of an Analytics Consultant for Massachusetts General Hospital (MGH).
 
@@ -11,15 +18,6 @@ You’ve been asked to build a high-level KPI report for the executive team, bas
 - How many procedures are covered by insurance?
 
 The dashboard should scale to accommodate new data over time, but the CEO has asked you to summarize any insights you can derive from the sample provided.
-
-## Table of Content
-
-* [Case Study](#case-study)
-* [Dataset Description](#dataset-description)
-* [ER Diagram](#er-diagram)
-* [Data Cleaning](#data-cleaning)
-* [Data Analysis](#data-analysis)
-* [Dashboard](#dashboard)
   
 ## Dataset Description
 Our data set consists of the following observations which include:
