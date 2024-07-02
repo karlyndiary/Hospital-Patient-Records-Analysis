@@ -113,4 +113,18 @@ ELSE
     "Not a Procedure"
 END
 ```
+- Age
+```
+DATEDIFF('year', [Birthdate], TODAY())
+```
+- Age Category
+```
+IF [Age] >= 0 AND [Age] <= 3 THEN "Infants/Toddlers"
+ELSEIF [Age] >= 4 AND [Age] <= 12 THEN "Children"
+ELSEIF [Age] >= 13 AND [Age] <= 19 THEN "Teenagers/Adolescents"
+ELSEIF [Age] >= 20 AND [Age] <= 35 THEN "Young Adults"
+ELSEIF [Age] >= 36 AND [Age] <= 55 THEN "Middle-Aged Adults"
+ELSE "Older Adults/Seniors"
+END
+```
 ## Dashboard
