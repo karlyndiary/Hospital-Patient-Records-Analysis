@@ -92,4 +92,25 @@ Our data set consists of the following observations which include:
 ![Hospital Records drawio](https://github.com/karlyndiary/Hospital-Patient-Records-Analysis/assets/116041695/614c3b94-1e7d-4bd3-9e9a-442f5f7a4155)
 
 ## Data Cleaning
+### Calculated Fields
+- Admitted or Readmitted Metric
+```
+{ FIXED [Start] : COUNTD([Patient]) }
+```
+- Stay Duration
+```
+DATEDIFF('day', [Start], [Stop])
+```
+- Count of Procedures
+```
+IF CONTAINS([Description], "procedure") THEN TRUE ELSE FALSE END
+```
+- Procedure Coverage Status
+```
+IF [Count Procedures] THEN
+    IF [Payer Coverage] > 0 THEN "Covered by Insurance" ELSE "Not Covered by Insurance" END
+ELSE
+    "Not a Procedure"
+END
+```
 ## Dashboard
