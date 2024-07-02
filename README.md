@@ -119,12 +119,16 @@ DATEDIFF('year', [Birthdate], TODAY())
 ```
 - Age Category
 ```
-IF [Age] >= 0 AND [Age] <= 3 THEN "Infants/Toddlers"
-ELSEIF [Age] >= 4 AND [Age] <= 12 THEN "Children"
-ELSEIF [Age] >= 13 AND [Age] <= 19 THEN "Teenagers/Adolescents"
-ELSEIF [Age] >= 20 AND [Age] <= 35 THEN "Young Adults"
-ELSEIF [Age] >= 36 AND [Age] <= 55 THEN "Middle-Aged Adults"
-ELSE "Older Adults/Seniors"
+IF [Age] >= 0 AND [Age] < 10 THEN "0-9"
+ELSEIF [Age] >= 10 AND [Age] < 20 THEN "10-19"
+ELSEIF [Age] >= 20 AND [Age] < 30 THEN "20-29"
+ELSEIF [Age] >= 30 AND [Age] < 40 THEN "30-39"
+ELSEIF [Age] >= 40 AND [Age] < 50 THEN "40-49"
+ELSEIF [Age] >= 50 AND [Age] < 60 THEN "50-59"
+ELSEIF [Age] >= 60 AND [Age] < 70 THEN "60-69"
+ELSEIF [Age] >= 70 AND [Age] < 80 THEN "70-79"
+ELSEIF [Age] >= 80 AND [Age] < 90 THEN "80-89"
+ELSE "90+"
 END
 ```
 ## Dashboard
