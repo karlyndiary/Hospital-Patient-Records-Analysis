@@ -89,7 +89,7 @@ Our data set consists of the following observations which include:
 - **ReasonDescription**: Description of the reason code.
 
 ## ER Diagram
-![Hospital Records drawio](https://github.com/karlyndiary/Hospital-Patient-Records-Analysis/assets/116041695/614c3b94-1e7d-4bd3-9e9a-442f5f7a4155)
+![Hospital Records drawio](https://github.com/karlyndiary/Hospital-Patient-Records-Analysis/assets/116041695/eff333ef-85b6-4fd2-bcc2-f297010bfbb5)
 
 ## Data Cleaning
 ### Calculated Fields
