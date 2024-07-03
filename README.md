@@ -131,4 +131,36 @@ ELSEIF [Age] >= 80 AND [Age] < 90 THEN "80-89"
 ELSE "90+"
 END
 ```
+- Admission Status
+```
+IF [Count Procedures] = True THEN
+    "Admitted"
+ELSE
+    "Not Admitted"
+END
+```
+- Latest Encounter Date
+```
+{ FIXED [Patient] : MAX([Start]) }
+```
+- Procedure Coverage Status
+```
+IF [Count Procedures] THEN
+    IF [Payer Coverage] > 0 THEN "Covered by Insurance" ELSE "Not Covered by Insurance" END
+ELSE
+    "Not a Procedure"
+END
+```
+- Procedure Coverage Status
+```
+IF [Count Procedures] THEN
+    IF [Payer Coverage] > 0 THEN "Covered by Insurance" ELSE "Not Covered by Insurance" END
+ELSE
+    "Not a Procedure"
+END
+```
+- Filter to Latest Date
+```
+IF [Start] = [Latest Encounter Date] THEN 1 ELSE 0 END
+```
 ## Dashboard
