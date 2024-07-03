@@ -163,4 +163,12 @@ END
 ```
 IF [Start] = [Latest Encounter Date] THEN 1 ELSE 0 END
 ```
+- Is Alive?
+```
+IF ISNULL([DeathDate]) THEN 'Alive' ELSE 'Deceased' END
+```
+- Full name
+```
+IFNULL([Prefix], '') + ' ' + [First] + ' ' + [Last]
+```
 ## Dashboard
