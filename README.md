@@ -159,7 +159,7 @@ ELSE
     "Not a Procedure"
 END
 ```
-- Filter to Latest Date
+- Filter to the Latest Date
 ```
 IF [Start] = [Latest Encounter Date] THEN 1 ELSE 0 END
 ```
@@ -167,8 +167,13 @@ IF [Start] = [Latest Encounter Date] THEN 1 ELSE 0 END
 ```
 IF ISNULL([DeathDate]) THEN 'Alive' ELSE 'Deceased' END
 ```
+- Cleaning first name and last name
+```
+REGEXP_REPLACE([first], '[^a-zA-Z]', '')
+REGEXP_REPLACE([last], '[^a-zA-Z]', '')
+```
 - Full name
 ```
-IFNULL([Prefix], '') + ' ' + [First] + ' ' + [Last]
+IFNULL([Prefix], '') + ' ' + [First_name] + ' ' + [Last_name]
 ```
 ## Dashboard
