@@ -5,8 +5,8 @@
 * [Dataset Description](#dataset-description)
 * [ER Diagram](#er-diagram)
 * [Data Cleaning](#data-cleaning)
-* [Data Analysis](#data-analysis)
 * [Dashboard](#dashboard)
+
 ## Case Study
 For the Maven Hospital Challenge, you’ll play the role of an Analytics Consultant for Massachusetts General Hospital (MGH).
 
@@ -176,35 +176,10 @@ REGEXP_REPLACE([last], '[^a-zA-Z]', '')
 ```
 IFNULL([Prefix], '') + ' ' + [First_name] + ' ' + [Last_name]
 ```
-- Department
-```
-IF CONTAINS([DESCRIPTION (procedures.csv)], "renal dialysis") THEN "Nephrology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "chemotherapy") THEN "Oncology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "bronchoscopy") THEN "Pulmonology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "colonoscopy") THEN "Gastroenterology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "cardioversion") THEN "Cardiology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "MRI") THEN "Radiology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "electrocardiography") THEN "Cardiology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "anesthesia") THEN "Anesthesiology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "biopsy") THEN "Pathology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "mammography") THEN "Radiology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "echocardiography") THEN "Cardiology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "vaccination") THEN "Immunology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "ultrasound") THEN "Radiology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "X-ray") THEN "Radiology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "physical examination") THEN "General Medicine"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "termination of pregnancy") THEN "Obstetrics"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "insertion of contraceptive device") THEN "Obstetrics and Gynecology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "labor induction") THEN "Obstetrics"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "surgery") THEN "General Surgery"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "screening") THEN "Preventive Medicine"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "transfusion") THEN "Transfusion Medicine"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "therapy") THEN "Therapy Services"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "culture") THEN "Microbiology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "blood test") THEN "Laboratory Medicine"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "immunization") THEN "Immunology"
-ELSEIF CONTAINS([DESCRIPTION (procedures.csv)], "endoscopy") THEN "Gastroenterology"
-ELSE "Other"
-END
-```
+
 ## Dashboard
+### Overview 
+![Overview](https://github.com/user-attachments/assets/4110571a-ea05-4a39-9f4a-a4d2297842d0)
+
+### Patients Detail 
+![Detail](https://github.com/user-attachments/assets/6e0c2ca5-398b-442f-8c1c-dd4eb329ba7a)
